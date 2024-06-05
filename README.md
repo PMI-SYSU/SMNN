@@ -16,7 +16,7 @@ The code for constructing and training  is implemented in Python (tested in Pyth
 
 
 ## Usage
-The code for training models for mnist task is located in `mnist/`, while the code for tranning models for contextual-dependent task is in `mante/`. Code for plotting Figure is in `Figure/`.
+The code for training models for mnist task is located in `mnist/`, while the code for tranning models for contextual-dependent task is in `mante/`. The figure drawn in the paper is in `Figure/`.
 
 ### Mnist task
 
