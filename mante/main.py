@@ -7,7 +7,7 @@ from generate_data import *
 
 Main codes for training a MDL model for contextual-dependent task
 
-L: storage list for training loss
+train_losses: storage list for training loss
 
 """
 
@@ -16,7 +16,6 @@ if __name__=='__main__':
     model.initialize()
     model = model.to(device)
     train_losses=[]
-    L=[]
     opt=optimizer(model.parameters(), lr=1e-3,betas=[0.9,0.999])
     for trial in np.arange(n):
         _=model.train()
@@ -27,5 +26,5 @@ if __name__=='__main__':
             print(loss)
         train_losses.append(loss)
         print(trial,train_losses[-1])
-
+    torch.save(train_losses, "./train_loss/H_{}_P_{}_{}.pth".format(hidden_shape,P,N))
     test(model)
