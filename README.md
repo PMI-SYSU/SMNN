@@ -83,7 +83,7 @@ You can train the model with,
 python mante/main.py 
 ```
 
- The training losses will be storaged in `L` and a test plot over 100 trials will be drawn.
+ The training losses will be storaged in `train_losses` and a test plot over 100 trials will be drawn.
 
 ## Citation
 This code is the product of work carried out by the group of [PMI lab, Sun Yat-sen University](https://www.labxing.com/hphuang2018). If the code helps, consider giving us a shout-out in your publications.
