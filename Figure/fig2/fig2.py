@@ -18,11 +18,10 @@ plt.rcParams['figure.dpi'] = 200
 
 device = torch.device("cuda") if torch.cuda.is_available() else torch.device("cpu")
 
-from Figure.mnist_utils import *
+from SMNN.Figure.mnist_utils import *
 from SMNN.mnist.model import *
 
-P_range=[1,2,3,4,5,10,30,50,100,200]
-N_range=[30,50,100,200]
+
 save_path='Results/mnist/' #save path for SMNN
 rate_path='Results/mnist/rate/' #save path for MDL RNN
 full_path='Results/mnist/full/'#save path for SNN
@@ -86,6 +85,7 @@ plt.ylim(top=98)
 fig = plt.figure(figsize=(8,5))
 ax = fig.add_subplot()
 P_range=[1,2,3,10,50,100]
+N_range=[30,50,100,200]
 name='train_loss'
 for P in P_range:
     results=[]

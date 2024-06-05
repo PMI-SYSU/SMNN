@@ -19,12 +19,12 @@ device = torch.device("cuda") if torch.cuda.is_available() else torch.device("cp
 
 from SMNN.Figure.mante_utils import *
 from SMNN.mante.model import *
-
+save_path='Results/mante/' #save path for SMNN
 for hidden_shape in [100]:
     for P in [3]:
         for i in [0]:
             model=MDL_RNN_mante(input_shape,hidden_shape,output_shape,P,'double')
-            _=model.load_state_dict(torch.load('./model/H_{}_P_{}_0.pth'.format(hidden_shape,P)))
+            _=model.load_state_dict(torch.load(save_path+'model/H_{}_P_{}_0.pth'.format(hidden_shape,P)))
             _=model.to(device)
 
 
