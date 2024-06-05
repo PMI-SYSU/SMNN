@@ -12,8 +12,8 @@ params = {
          'axes.spines.right': True,
          'axes.titlesize': 'xx-large',}
 pylab.rcParams.update(params)
-plt.rcParams['savefig.dpi'] = 200 #图片像素
-plt.rcParams['figure.dpi'] = 200 #分辨率
+plt.rcParams['savefig.dpi'] = 200 
+plt.rcParams['figure.dpi'] = 200 
 
 device = torch.device("cuda") if torch.cuda.is_available() else torch.device("cpu")
 
