@@ -28,14 +28,19 @@ The settings file (`mnist/model_settings.py`) contains the following input argum
   - `input_shape`: numbers of input signals.
   - `output_shape`: output size.
   - `n`: trials of training.
-  - `time_steps`: time steps.
+  - `T`: time steps.
   - `batchsize`: batch size for training.
   - `device`: cpu or gpu device for running.
   - `spike_grad`: surrogate delta function.
-  - `dt`: time interval.
+  - `spike_grad_approx`: smooth transfer function
+  - `dt`: time step.
   - `train_loader`: data loader for training.
   - `test_loader`: data loader for testing.
   - `optmizer`: optimizer.
+  - `vthr`: firing threshold.
+  - `tau_m`: membrane time constant.
+  - `tau_d`: synaptic decay time constant.
+  - `tau_r`: synaptic rise time constant.
 
 You can train the model with,
 
@@ -58,6 +63,7 @@ The settings file (`mante/model_settings.py`) contains the following input argum
   - `batchsize`: batch size for training.
   - `device`: cpu or gpu device for running.
   - `spike_grad`: surrogate delta function.
+  - `spike_grad_approx`: smooth transfer function
   - `epochs_num`: epochs for each trials.
   - `zero_time1`: zero time beform stimulus.
   - `zero_time2`: zero time after stimulus.
@@ -66,6 +72,10 @@ The settings file (`mante/model_settings.py`) contains the following input argum
   - `zero1`: zero input beform stimulus.
   - `zero2`: zero input beform stimulus.
   - `optmizer`: optimizer.
+  - `vthr`: firing threshold.
+  - `tau_m`: membrane time constant.
+  - `tau_d`: synaptic decay time constant.
+  - `tau_r`: synaptic rise time constant.
 
 You can train the model with,
 
