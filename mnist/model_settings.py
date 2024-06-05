@@ -45,7 +45,7 @@ T = 100
 input_shape=784
 num_classes=10
 dt=0.2
-batch_size = 256
+batch_size = 300
 n=10
 mnist_train = datasets.MNIST(data_path, train=True, download=True, transform=transform)
 mnist_test = datasets.MNIST(data_path, train=False, download=True, transform=transform)
