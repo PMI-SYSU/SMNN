@@ -34,7 +34,7 @@ spike_grad = surrogate.fast_sigmoid()
 def spike_grad_approx(x,beta=20):
     return (1+torch.tanh(beta*x))/2
 device = torch.device("cuda") if torch.cuda.is_available() else torch.device("cpu")
-input_shape=2
+input_shape=4
 output_shape=1
 batchsize=100
 n=10
